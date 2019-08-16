@@ -69,3 +69,9 @@ $arrayNAssocJson = json_decode($json);
 echo "Marcos: {$arrayNAssocJson->Marcos}".PHP_EOL;
 echo "Antonio: {$arrayNAssocJson->Antonio}".PHP_EOL;
 echo "Jose: {$arrayNAssocJson->Jose}".PHP_EOL;
+
+//e caso queira converter sua array em JSON também é simples:
+//Utilize o método json_encode($string)
+$jsonConvertido = json_encode($arrayAssoc);
+
+echo "Json: ".PHP_EOL."$jsonConvertido".PHP_EOL;
