@@ -37,49 +37,8 @@ class Functions
     {
         return $a ** $b;
     }
-    /* Types Shield Functions */
-    static function tStr($v, string $d = ''): string
+    static function nNull($v, $d = '')
     {
-        $return = $d;
-        try {
-            $return = strval($v);
-        } catch (Exception $e) {
-
-            $return = $d;
-        }
-        return $return;
-    }
-
-    static function tInt($v, int $d = 0): int
-    {
-        $return = $d;
-        try {
-            $return = intval($v);
-        } catch (Exception $e) {
-            $return = $d;
-        }
-        return $return;
-    }
-
-    static function tFloat($v, float $d = 0): float
-    {
-        $return = $d;
-        try {
-            $return = floatval($v);
-        } catch (Exception $e) {
-            $return = $d;
-        }
-        return $return;
-    }
-
-    static function tBool($v, boolean $d = NULL): boolean
-    {
-        $return = $d;
-        try {
-            $return = boolval($v);
-        } catch (Exception $e) {
-            $return = $d;
-        }
-        return $return;
+        return $v != NULL && isset($v) ? $v : $d;
     }
 }
