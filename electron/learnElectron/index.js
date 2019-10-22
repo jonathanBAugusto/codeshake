@@ -10,7 +10,7 @@ if (typeof module === "object") {
 
 $(document).ready(() => {
   $("#btnCalculadora").on("click", () => {
-    alert("Calculadora say: You Click-me hehe!");
+    window.open('./src/views/calculadora_view.html', 'modal');
   });
 
   $("#btnJokenpo").on("click", () => {
@@ -22,7 +22,7 @@ $(document).ready(() => {
   });
 
   $("#btnSair").on("click", () => {
-    alert("Adios! T-T");
-    w.close();
+    if(window.confirm("You sure? :("))
+      w.close();
   });
 });

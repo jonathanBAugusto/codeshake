@@ -13,9 +13,25 @@ function createWindow() {
     height: 600,
     webPreferences: {
       preload: path.join(__dirname, "preload.js"),
-      nodeIntegration: true
+      nodeIntegration: true,
+      nativeWindowOpen: true
     }
   });
+
+  mainWindow.webContents.on('new-window', (event, url, frameName, disposition, options, additionalFeatures) => {
+    if (frameName === 'modal') {
+      // open window as modal
+      event.preventDefault()
+      Object.assign(options, {
+        modal: true,
+        parent: mainWindow,
+        width: 300,
+        height: 500,
+        center: true
+      })
+      event.newGuest = new BrowserWindow(options)
+    }
+  })
 
   // and load the index.html of the app.
   mainWindow.loadFile("index.html");
