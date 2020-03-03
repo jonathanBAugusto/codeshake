@@ -8,6 +8,15 @@ if (typeof module === "object") {
   module = undefined;
 }
 
-$(document).ready(() => {
-
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('binInput').addEventListener('keypress', (e) => {
+    saveLog(document.getElementById('binInput').value);
+  });
+  document.getElementById('decInput').addEventListener('keypress', (e) => {
+    saveLog(JSON.stringify(e));
+  });
 });
+
+function saveLog(text) {
+  document.getElementById('logArea').innerHTML += '\n' + text;
+}
