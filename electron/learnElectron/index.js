@@ -9,20 +9,5 @@ if (typeof module === "object") {
 }
 
 $(document).ready(() => {
-  $("#btnCalculadora").on("click", () => {
-    window.open('./src/views/calculadora_view.html', 'modal');
-  });
 
-  $("#btnJokenpo").on("click", () => {
-    alert("Jokenpo say: You Click-me hehe!");
-  });
-
-  $("#btnJogodavelha").on("click", () => {
-    alert("Jogodavelha say: You Click-me hehe!");
-  });
-
-  $("#btnSair").on("click", () => {
-    if(window.confirm("You sure? :("))
-      w.close();
-  });
 });
