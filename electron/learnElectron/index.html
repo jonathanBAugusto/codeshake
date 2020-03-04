@@ -1,64 +1,136 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Hey Samuka!</title>
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <script>
-      const $ = require("jquery");
-      require("popper.js");
-      require("bootstrap");
-    </script>
-    <link rel="stylesheet" href="./plugins/font-awesome.css" />
-  </head>
 
-  <body style="background-color:darkorchid;">
-    <div
-      class="container-fluid h-100 d-flex align-items-center justify-content-center"
-    >
+<head>
+  <meta charset="UTF-8" />
+  <title>Hey Samuka!</title>
+  <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+  <script>
+    const $ = require("jquery");
+    require("popper.js");
+    require("bootstrap");
+  </script>
+  <link rel="stylesheet" href="./plugins/font-awesome.css" />
+  <link rel="stylesheet" href="./static/css/css.min.css" />
+</head>
+
+<body style="background-color:#9932cc;">
+  <div id="conteudo" class="d-flex">
+    <div class="container-fluid h-100 d-flex align-items-center justify-content-center">
       <div class="row w-100">
-        <div class="col-4 p-2">
-          <div class="card p-2">
-            <div class="mb-2">Bin2Dec</div>
-            <div class="d-flex align-items-center">
-              <input
-                type="text"
-                class="form-control form-control-sm col"
-                name="binInput"
-                id="binInput"
-                placeholder="Binary"
-                style="width: 60px;"
-              />
-              <span class="col-auto px-1">TO</span>
-              <input
-                type="text"
-                class="form-control form-control-sm col"
-                name="decInput"
-                id="decInput"
-                placeholder="Decimal"
-                style="width: 60px;"
-              />
-            </div>
-          </div>
+        <div id="binToDec" class="col-4 p-2">
+
         </div>
-        <div class="col p-2">
-          <div class="form-group">
-            <label for="logArea">LOG</label>
-            <textarea
-              class="form-control"
-              name="logArea"
-              id="logArea"
-              rows="6"
-            ></textarea>
+        <div id="borderRadius" class="col-8 col-lg-4 p-2">
+          <div class="card p-2">
+            <div class="mb-2">Border Radius</div>
+            <div class="col-12">
+              <div id="rectangle" class="col-12" style="height: 10vh; background-color: #acc4c5;">
+
+              </div>
+              <div class="row p-2">
+                <div class="col-6">
+                  <div class="form-group col-12">
+                    <div class="row">
+                      <label for="topLeft">Top Left</label>
+                      <input type="text" class="form-control" name="topLeft" id="topLeft" placeholder="0">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="tlType" id="tlPx" value="checkedValue"
+                            checked>
+                          px
+                        </label>
+                      </div>
+                      <div class="form-check ml-3">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="tlType" id="tlPorc" value="checkedValue">
+                          %
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group col-12">
+                    <div class="row">
+                      <label for="topRight">Top Right</label>
+                      <input type="text" class="form-control" name="topRight" id="topRight" placeholder="0">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="trType" id="trPx" value="checkedValue"
+                            checked>
+                          px
+                        </label>
+                      </div>
+                      <div class="form-check ml-3">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="trType" id="trPorc" value="checkedValue">
+                          %
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group col-12">
+                    <div class="row">
+                      <label for="bottomLeft">Bottom Left</label>
+                      <input type="text" class="form-control" name="bottomLeft" id="bottomLeft" placeholder="0">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="blType" id="blPx" value="checkedValue"
+                            checked>
+                          px
+                        </label>
+                      </div>
+                      <div class="form-check ml-3">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="blType" id="blPorc" value="checkedValue">
+                          %
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="form-group col-12">
+                    <div class="row">
+                      <label for="bottomRight">Bottom Right</label>
+                      <input type="text" class="form-control" name="bottomRight" id="bottomRight" placeholder="0">
+                      <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="brType" id="brPx" value="checkedValue"
+                            checked>
+                          px
+                        </label>
+                      </div>
+                      <div class="form-check ml-3">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="brType" id="brPorc" value="checkedValue">
+                          %
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col p-2"></div>
         <div class="col p-2"></div>
       </div>
     </div>
-    <script src="./index.js"></script>
-  </body>
+    <footer class="footer">
+      <div class="container-fluid w-100" style>
+        <div class="card col-12 p-2">
+          <label for="logArea">LOG</label>
+          <textarea class="form-control" name="logArea" id="logArea" rows="6"></textarea>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
 </html>
