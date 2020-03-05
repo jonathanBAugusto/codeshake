@@ -4,7 +4,6 @@
     // Para obter mais informações, visite: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
             "name": "Debug Main Process",
             "type": "node",
@@ -14,7 +13,9 @@
             "windows": {
                 "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron.cmd"
             },
-            "args": ["."],
+            "args": [
+                "."
+            ],
             "outputCapture": "std"
         }
     ]
