@@ -14,7 +14,7 @@
   "author": "Jonathan B. Augusto",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^8.1.0"
+    "electron": "^8.5.1"
   },
   "dependencies": {
     "mocha": "^7.1.0",
