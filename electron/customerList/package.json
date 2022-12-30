@@ -17,7 +17,7 @@
     "electron": "^8.1.0"
   },
   "dependencies": {
-    "mocha": "^7.1.0",
+    "mocha": "^10.2.0",
     "npm-install-retry": "^2.0.0"
   }
 }
